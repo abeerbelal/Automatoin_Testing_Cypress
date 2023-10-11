@@ -19,7 +19,11 @@ import './commands'
 
 import '@shelex/cypress-allure-plugin';
 import 'cypress-plugin-api';
+import './API/Utils/ApiUtils';
+import '@cypress/grep';
 
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()
