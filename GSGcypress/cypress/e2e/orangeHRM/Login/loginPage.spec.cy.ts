@@ -8,7 +8,7 @@ describe("Login Home Page", () => {
     cy.fixture("login").as("login");
   });
 
-  it("Check valid user name and password", () => {
+  it.only("Check valid user name and password", () => {
     cy.get("@login").then((infoData: any) => {
       loginObj.logIn(
         infoData.valid_both.userName,
@@ -96,7 +96,7 @@ describe("Login Home Page", () => {
     });
   });
 
-  it.only("should not login blank user valid password", () => {
+  it("should not login blank user valid password", () => {
     cy.get("@login").then((data: any) => {
       const { userName, password } = data.valid_both;
 
